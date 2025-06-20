@@ -1,38 +1,51 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import aakarLogo from '../assets/Images/aakarFinalLogo.png';
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="bg-slate-500 text-white">
-      <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
-        
-        <div className="flex items-center space-x-2">
+    <header className="bg-white sticky top-0 z-50 w-full">
+      <div className="max-w-7xl mx-auto  py-2 flex items-center justify-between">
+        {/* Logo */}
+        <div className="flex-shrink-0">
           <img
-            src="/logo.png" 
+            src={aakarLogo}
             alt="Aakar Digital Solution Logo"
-            className="w-10 h-10"/>
-
-          <span className="text-xl font-bold">Aakar Digital Solution</span>
+            className="w-36 h-auto"
+          />
         </div>
 
-        {/* Desktop Menu */}
-        <ul className="hidden md:flex space-x-6">
-          <li><Link to="/" className="hover:border hover:bg-slate-100 hover:rounded-3xl p-2 hover:text-black ">Homepage</Link></li>
-          <li><Link to="/about" className="hover:border hover:bg-slate-100 hover:rounded-3xl p-2 hover:text-black ">About</Link></li>
-        </ul>
+        {/* Center Nav Links */}
+        <nav className="hidden md:flex flex-1 justify-center space-x-12">
+          <Link to="/" className="font-quicksand  text-base font-semibold transition-all duration-300 transform hover:-translate-y-1 ">Home</Link>
+          <Link to="aakarPrakashan" className="font-quicksand   text-base font-semibold transition-all duration-300 transform hover:-translate-y-1">Aakar Prakashan</Link>
+          <Link to="aakarDigitalProduct" className="font-quicksand   text-base font-semibold transition-all duration-300 transform hover:-translate-y-1">Aakar Digital Product</Link>
+          <Link to="aakarWebAndSoftware" className="font-quicksand   text-base font-semibold transition-all duration-300 transform hover:-translate-y-1">Aakar Web & Software</Link>
+          <Link to="aakarGraphics" className="font-quicksand   text-base font-semibold transition-all duration-300 transform hover:-translate-y-1">Aakar Graphics</Link>
+        </nav> 
 
-        {/* Mobile Hamburger Icon */}
+        {/* Contact Button */}
+        <div className="hidden md:block">
+          <Link
+            to="/contact"
+            className= "font-quicksand hover:border border-gray-700 border-b-4  text-black  font-semibold px-4 py-2 rounded-xl border hover:shadow-md hover:scale-105 transition-all duration-100"
+          >
+            Contact Us
+          </Link>
+        </div>
+
+        {/* Mobile Menu Icon */}
         <div className="md:hidden">
           <button onClick={() => setMenuOpen(!menuOpen)}>
             <svg
-              className="w-6 h-6"
+              className="w-6 h-6 text-black"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg">
-                
+              xmlns="http://www.w3.org/2000/svg"
+            >
               {menuOpen ? (
                 <path
                   strokeLinecap="round"
@@ -53,13 +66,21 @@ function Header() {
         </div>
       </div>
 
-      {/* Mobile Menu Dropdown */}
+      {/* Mobile Dropdown */}
       {menuOpen && (
-        <ul className="md:hidden bg-slate-600 px-4 pb-4 space-y-2">
-          <li><Link to="/" className="block py-2 ">Homepage</Link></li>
-          <li><Link to="/about" className="block py-2 ">About</Link></li>
-          
-        </ul>
+        <div className="md:hidden px-4 pb-4 space-y-2 bg-white text-black justify-center items-center text-center">
+          <Link to="/" className="font-quicksand block py-2 text-base font-medium transition-all duration-300 transform hover:-translate-y-1">Home</Link>
+          <Link to="aakarGraphics" className="font-quicksand block py-2 text-base font-medium transition-all duration-300 transform hover:-translate-y-1">Aakar Graphics</Link>
+          <Link to="aakarPrakashan" className="font-quicksand block py-2 text-base font-medium transition-all duration-300 transform hover:-translate-y-1">Aakar Prakashan</Link>
+          <Link to="aakarDigitalProduct" className="font-quicksand block py-2 text-base font-medium transition-all duration-300 transform hover:-translate-y-1">Aakar Digital Product</Link>
+          <Link to="aakarWebAndSoftware" className="font-quicksand block py-2 text-base font-medium transition-all duration-300 transform hover:-translate-y-1">Aakar Web & Software</Link>
+
+           <Link
+            to="/contact"
+            className="font-quicksand block hover:border border-gray-700 border-b-4  text-black  font-semibold px-4 py-2 rounded-xl border hover:shadow-md hover:scale-105 transition-all duration-100 " >
+            Contact Us
+          </Link>
+        </div>
       )}
     </header>
   );

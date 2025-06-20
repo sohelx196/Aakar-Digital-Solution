@@ -2,13 +2,15 @@ import React from 'react'
 
 function Service() {
   return (
+
     <>
-       <section>
-          <div>
-            <h1 className='text-lg text-red-800 font-bold'>Our Service</h1>
-          </div>
-       </section>
+     <section className='h-full w-full text-center item-center justify-center flex flex-col'>
+        <div className=''>
+            <h1 className='text-4xl font-bold'>Service Page</h1>
+        </div>
+      </section>
     </>
+
   )
 }
 

@@ -3,9 +3,11 @@
 function About() {
   return (
     <>
-       <section>
-          <h1>This is about section</h1>
-       </section>
+      <section className='h-full w-full text-center item-center justify-center flex flex-col'>
+        <div className=''>
+            <h1 className='text-4xl font-bold'>About Page</h1>
+        </div>
+      </section>
     </>
   )
 }
