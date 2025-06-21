@@ -69,14 +69,15 @@ function Header() {
       {/* Mobile Dropdown */}
       {menuOpen && (
         <div className="md:hidden px-4 pb-4 space-y-2 bg-white text-black justify-center items-center text-center">
-          <Link to="/" className="font-quicksand block py-2 text-base font-medium transition-all duration-300 transform hover:-translate-y-1">Home</Link>
-          <Link to="aakarGraphics" className="font-quicksand block py-2 text-base font-medium transition-all duration-300 transform hover:-translate-y-1">Aakar Graphics</Link>
-          <Link to="aakarPrakashan" className="font-quicksand block py-2 text-base font-medium transition-all duration-300 transform hover:-translate-y-1">Aakar Prakashan</Link>
-          <Link to="aakarDigitalProduct" className="font-quicksand block py-2 text-base font-medium transition-all duration-300 transform hover:-translate-y-1">Aakar Digital Product</Link>
-          <Link to="aakarWebAndSoftware" className="font-quicksand block py-2 text-base font-medium transition-all duration-300 transform hover:-translate-y-1">Aakar Web & Software</Link>
+          <Link to="/" onClick={() => setMenuOpen(false)} className="font-quicksand block py-2 text-base font-medium transition-all duration-300 transform hover:-translate-y-1">Home</Link>
+          <Link to="aakarGraphics" onClick={() => setMenuOpen(false)} className="font-quicksand block py-2 text-base font-medium transition-all duration-300 transform hover:-translate-y-1">Aakar Graphics</Link>
+          <Link to="aakarPrakashan" onClick={() => setMenuOpen(false)} className="font-quicksand block py-2 text-base font-medium transition-all duration-300 transform hover:-translate-y-1">Aakar Prakashan</Link>
+          <Link to="aakarDigitalProduct" onClick={() => setMenuOpen(false)} className="font-quicksand block py-2 text-base font-medium transition-all duration-300 transform hover:-translate-y-1">Aakar Digital Product</Link>
+          <Link to="aakarWebAndSoftware" onClick={() => setMenuOpen(false)} className="font-quicksand block py-2 text-base font-medium transition-all duration-300 transform hover:-translate-y-1">Aakar Web & Software</Link>
 
            <Link
             to="/contact"
+            onClick={() => setMenuOpen(false)}
             className="font-quicksand block hover:border border-gray-700 border-b-4  text-black  font-semibold px-4 py-2 rounded-xl border hover:shadow-md hover:scale-105 transition-all duration-100 " >
             Contact Us
           </Link>

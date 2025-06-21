@@ -1,5 +1,9 @@
 import React from 'react';
 import arrow from '../assets/Images/arrowIcon.png';
+ import locationIcon from '../assets/Images/icons/location.svg';
+ import phone from '../assets/Images/icons/telephone.svg';
+import website from '../assets/Images/icons/website.svg';
+import bgPattern from '../assets/Images/contactDesign.png';
 
 function Contact() {
   return (
@@ -69,10 +73,38 @@ function Contact() {
 
         </form>
       </div>
+      
     </section>
 
-    <section>
-         
+ <section
+      className="bg-cover bg-center py-10 px-4 "
+      style={{ backgroundImage: `url(${bgPattern})` }}
+    >
+      <div className="max-w-4xl mx-auto text-center">
+        <p className="font-quicksand text-gray-700 text-base font-medium mb-2">Our Contact Detail</p>
+        <h2 className="font-quicksand text-3xl md:text-4xl font-bold mb-12">Have a <span className='text-gray-700'>Question?</span></h2>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {/* Address */}
+          <div className="flex flex-col items-center ">
+            <img src={locationIcon} alt="Location" className="w-8 h-8 mb-3 sm:mb-3 lg:mb-4" />
+            <p className="font-quicksand font-semibold ">Aakar Graphics</p>
+            <p className="font-quicksand font-semibold">Padawa, Khandwa</p>
+          </div>
+
+          {/* Phone */}
+          <div className="flex flex-col items-center space-y-2">
+            <img src={phone} alt="Phone" className="w-7 h-7 mb-1 sm:mb-2 lg:mb-4" />
+            <p className="font-semibold font-quicksand">9009239011</p>
+          </div>
+
+          {/* Website */}
+          <div className="flex flex-col items-center space-y-2">
+            <img src={website} alt="Website" className="w-7 h-7 mb-1 sm:mb-2 lg:mb-4" />
+            <p className="font-semibold font-quicksand ">aakargraphics.com</p>
+          </div>
+        </div>
+      </div>
     </section>
     </>
 
