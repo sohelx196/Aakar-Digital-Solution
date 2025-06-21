@@ -22,8 +22,8 @@ function Footer() {
           <div className='text-center'>
             <h4 className="mb-3 font-medium text-gray-500 font-cabin text-base">Company</h4>
             <ul className=" space-y-4 mt-4">
-              <li className="hover:text-gray-400 cursor-pointer text-base  font-cabin">Home</li>
-              <li className="hover:text-gray-400 cursor-pointer text-base  font-cabin">About</li>
+              <li className="hover:text-gray-400  cursor-pointer text-base  font-cabin ">Home</li>
+              <li className="hover:text-gray-400  cursor-pointer text-base  font-cabin ">About</li>
             </ul>
           </div>
           <div className='text-center'>
