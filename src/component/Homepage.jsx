@@ -1,21 +1,22 @@
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 import React from 'react'
 import aboutImg from '../assets/Images/aboutImageFinal.png'
 import heroImg from '../assets/Images/heroSecImg.png'
 
 import graphicImage from '../assets/Images/GraphicDesignImg.png'
-import webDesignImg from '../assets/Images/aakarHeroImg.png'
-
+import webDesignImg from '../assets/Images/GraphicDesignImg.png'
+import softwareImage from '../assets/Images/softwareSolution.png';
 
 function Homepage() {
 
   useEffect(() => {
   AOS.init({
-    duration: 1000, // animation duration
-    once: true      // animation only once when scrolled into view
+    duration: 1000, 
+    once: true      
   });
 }, []);
 
@@ -68,12 +69,18 @@ function Homepage() {
     </p>
 
     <div className="flex gap-6 justify-center md:justify-start ">
+      <Link to='aakarDigitalProduct'>
       <button className="text-xs sm:text-sm md:text-base lg:text-lg font-quicksand hover:border border-gray-700 border-b-4 text-black font-semibold px-4 py-2 rounded-xl border hover:shadow-md hover:scale-105 transition-all duration-100">
         SEE OUR PRODUCTS
       </button>
+      </Link>
+
+<Link to='/Contact'>
       <button className="text-xs sm:text-sm md:text-base lg:text-lg font-quicksand hover:border border-gray-700 border-b-4 text-black font-semibold px-4 py-2 rounded-xl border hover:shadow-md hover:scale-105 transition-all duration-100">
         GET IN TOUCH
       </button>
+</Link>
+
     </div>
   </div>
 </section>
@@ -100,14 +107,14 @@ function Homepage() {
 
 
 {/* graphic design service start */}
-    <section className=" text-black px-6 py-16 md:py-24 h-screen">
+    <section className=" text-black px-6 py-16 md:py-24 h-screen ">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">
         {/* Left Image */}
         <div className="w-full md:w-1/2 flex justify-center" data-aos="fade-right">
           <img
             src={graphicImage}
             alt="Graphic Design"
-            className="w-[300px] md:w-[450px] lg:w-[500px]"
+            className="w-[300px] md:w-[450px] lg:w-[600px]"
           />
         </div>
 
@@ -126,13 +133,15 @@ function Homepage() {
     </section>
 {/* graphic design service end */}
 
+
 {/* web design start */}
 
-<section className="bg-white text-black px-6 py-16 md:py-24 h-screen ">
-  <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10">
-     
+<section className="relative text-black px-6 py-16 md:py-24 h-screen flex flex-col justify-center items-center overflow-hidden bg-gradient-to-br from-[#f5f7fa] to-[#c3cfe2]">
+
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">
+    
     {/* Left Content */}
-    <div className="w-full md:w-1/2 space-y-6 text-center md:text-left md:pl-8" data-aos="fade-right">
+    <div className="w-full md:w-1/2 space-y-6 text-center md:text-left" data-aos="fade-right">
       <h2 className="text-gray-600 font-saira text-4xl sm:text-5xl lg:text-8xl font-extrabold leading-tight">
         WEB <span className="block">DESIGN</span>
       </h2>
@@ -154,9 +163,40 @@ function Homepage() {
   </div>
 </section>
 
-
 {/* web design end */}
 
+
+{/* software solution start */}
+
+   <section className="bg-white text-black px-6 py-16 md:py-24 min-h-screen flex items-center">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12">
+        
+        {/* Left Image */}
+        <div className="w-full md:w-1/2 flex justify-center" data-aos="fade-right">
+          <img
+            src={softwareImage}
+            alt="Software Solution"
+            className="w-[280px] md:w-[400px] lg:w-[550px]"
+          />
+        </div>
+
+        {/* Right Content */}
+        <div className="w-full md:w-1/2 space-y-6 text-center md:text-left" data-aos="fade-left">
+          <h2 className="text-gray-600 font-saira text-4xl sm:text-5xl lg:text-8xl font-extrabold leading-tight">
+            SOFTWARE <span className="block">SOLUTION</span>
+          </h2>
+          <p className="text-sm sm:text-base md:text-lg font-quicksand text-gray-700 leading-relaxed max-w-xl mx-auto md:mx-0">
+          At Aakar Digital Solutions, we craft smart, scalable software that simplifies your workflow and drives business growth. From web apps to enterprise tools, our solutions blend innovation, usability, and performance to deliver real results.
+          </p>
+        </div>
+      </div>
+    </section>
+
+{/* software solution end */}
+
+
+{/* Mobile app dev start */}
+{/* Mobile app dev end */}
 
 
 {/* Service end */}
