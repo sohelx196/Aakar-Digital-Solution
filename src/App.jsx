@@ -7,7 +7,7 @@ function App() {
   <>
   <ScrollToTop />
     <Header/>
-      <div className="h-full w-full">
+      <div className="overflow-x-hidden w-full">
          <Outlet/>
       </div>
       <Footer/>

@@ -1,6 +1,8 @@
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
+import  { useState } from 'react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
@@ -20,6 +22,10 @@ import productImg2 from '../assets/Images/officeImg.jpeg';
 import productImg3 from '../assets/Images/officeImg.jpeg';
 
 import whyChooseImg from '../assets/Images/officeImg.jpeg';
+
+
+
+
 function Homepage() {
 
   useEffect(() => {
@@ -38,11 +44,88 @@ const products = [
   { title: 'BANNER', img: productImg3 },
 ];
 
+const testimonials = [
+  {
+    name: "Sacha Dubois",
+    title: "Social media influencer",
+    image: "https://i.pravatar.cc/100?img=1", 
+    text:   " lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
+  },
+  {
+    name: "Itsuki Takahashi",
+    title: "Founder, KNJ Label",
+    image: "https://i.pravatar.cc/100?img=2",
+    text: " lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
+  },
+  {
+    name: "Vanna Trinh",
+    title: "President, The Plew",
+    image: "https://i.pravatar.cc/100?img=3",
+    text: " lorem20 ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
+  }
+];
+
+ const [index, setIndex] = useState(0);
+  const total = testimonials.length;
+
+  const handleNext = () => setIndex((index + 1) % total);
+  const handlePrev = () => setIndex((index - 1 + total) % total);
+
+  const { name, title, image, text } = testimonials[index];
+
+
+
+
+  // Faq's
+  const faqs = [
+  {
+    question: "What services does Aakar Digital Solution offer?",
+    answer:
+      "We specialize in graphic design, digital marketing, publication, web development, and custom software solutions — all designed to elevate your brand.",
+  },
+  {
+    question: "Can I get a custom design tailored to my brand?",
+    answer:
+      "Absolutely! We work closely with clients to create unique, brand-specific designs for logos, posters, social media, and more.",
+  },
+  {
+    question: "Do you build websites for small businesses?",
+    answer:
+      "Yes, we offer affordable and professional website design and development tailored for startups and growing businesses.",
+  },
+  {
+    question: "What’s the process to get started with a project?",
+    answer:
+      "Just contact us with your requirements. We’ll schedule a consultation, understand your needs, and provide a clear quote and timeline.",
+  },
+  {
+    question: "Do you offer social media marketing services?",
+    answer:
+      "Yes! We provide strategic social media content, design, and marketing campaigns to help you grow your online presence.",
+  },
+  {
+    question: "How long does it take to complete a project?",
+    answer:
+      "Timelines vary by project scope, but most design work is completed in 3–7 days. Websites and software solutions may take 2–4 weeks.",
+  },
+];
+
+ const [activeIndex, setActiveIndex] = useState(null);
+
+  const handleToggle = (index) => {
+    if (index === activeIndex) {
+      setActiveIndex(null); // Close if same index clicked
+    } else {
+      setActiveIndex(index); // Open new, close previous
+    }
+  };
+// faq end
+
 
 
   return (
     <>
-<section className="lg:min-h-screen flex flex-col-reverse md:flex-row items-center justify-between px-6 md:px-20 bg-gradient-to-br from-[#2d4048] to-[#132a45] text-white py-12">
+<section className="lg:min-h-screen flex flex-col-reverse md:flex-row items-center justify-between px-6 md:px-20 bg-gradient-to-br from-[#2d4048] to-[#132a45] text-white py-12 overflow-x-hidden">
   
   {/* Left Content */}
   <div className="w-full md:w-1/2 text-center md:text-left space-y-6 mt-8 md:mt-0">
@@ -134,7 +217,7 @@ const products = [
 
 
 {/* graphic design service start */}
-    <section className=" text-black px-6 py-16 md:py-24 h-screen ">
+    <section className=" text-black px-6 py-16 md:py-24 lg:h-screen ">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">
         {/* Left Image */}
         <div className="w-full md:w-1/2 flex justify-center" data-aos="fade-right">
@@ -163,7 +246,7 @@ const products = [
 
 {/* web design start */}
 
-<section className="relative text-black px-6 py-16 md:py-24 h-screen flex flex-col justify-center items-center overflow-hidden bg-gradient-to-br from-[#f5f7fa] to-[#c3cfe2]">
+<section className="relative text-black px-6 py-16 md:py-24 lg:h-screen flex flex-col justify-center items-center overflow-hidden bg-gradient-to-br from-[#f5f7fa] to-[#c3cfe2]">
 
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">
     
@@ -195,7 +278,7 @@ const products = [
 
 {/* software solution start */}
 
-   <section className="bg-white text-black px-6 py-16 md:py-24 min-h-screen flex items-center">
+   <section className="bg-white text-black px-6 py-16 md:py-24 lg:h-screen flex items-center">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12">
         
         {/* Left Image */}
@@ -223,7 +306,7 @@ const products = [
 
 
 {/* Mobile app dev start */}
-<section className="bg-gradient-to-br from-[#f5f7fa] to-[#c3cfe2] text-white px-6 py-16 md:py-24 min-h-screen flex items-center">
+<section className="bg-gradient-to-br from-[#f5f7fa] to-[#c3cfe2] text-white px-6 py-16 md:py-24 lg:h-screen flex items-center">
   <div className="max-w-7xl mx-auto w-full flex flex-col md:flex-row items-center justify-between gap-10">
     
     {/* Left Content */}
@@ -251,7 +334,7 @@ const products = [
 
 {/* software solution start */}
 
-   <section className="bg-white text-black px-6 py-16 md:py-24 min-h-screen flex items-center">
+   <section className="bg-white text-black px-6 py-16 md:py-24 lg:h-screen flex items-center">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12">
         
         {/* Left Image */}
@@ -281,9 +364,6 @@ const products = [
 
 
 {/* our product start */}
-
-
-
 
     <section className="bg-[#1e1145] py-16 px-6 sm:px-10 lg:px-20 h-content">
       <h2 className="mb-24 font-saira text-center text-white font-bold text-4xl sm:text-5xl md:text-6xl lg:text-8xl  ">
@@ -358,11 +438,7 @@ const products = [
             </h2>
 
             {/* Overlapping Box */}
-            <div data-aos="fade-left" className="bg-white border border-black shadow-xl rounded-2xl p-10 text-gray-600 mt-5 lg:absolute lg:left-[-110px] lg:w-[550px] z-20">
-              
-              {/* <h3 className="font-cabin text-2xl font-semibold mb-4 text-[#000000]">
-               
-              </h3> */}
+            <div data-aos="fade-left" className="bg-white border  shadow-xl rounded-2xl p-10 text-gray-600 mt-5 lg:absolute lg:left-[-110px] lg:w-[550px] z-20">
 
               <p className="font-cabin text-base font-normal text-[#696969] mb-4">
                 Clients trust Aakar Digital Solution for our creative designs, reliable service, and commitment to quality. We understand each brand is unique, and we deliver personalized solutions that help businesses stand out and succeed in today’s digital world.
@@ -381,16 +457,94 @@ const products = [
 
 
 {/* what our client say start */}
+    <section className="w-full lg:min-h-screen flex items-center justify-center px-6 py-10  relative">
+      <div className="max-w-3xl w-full mx-auto bg-white rounded-3xl border border-gray-600 shadow-2xl p-10 md:p-16 transition-all duration-500 ease-in-out">
+        <h2 className="font-saira text-4xl sm:text-5xl font-bold text-center text-gray-600 mb-10">
+          “ WHAT OUR CLIENTS SAY ”
+        </h2>
 
-<section className='lg:px-20'>
-<div>
-  <h1 className='text-8xl font-saira text-center'>What Our <span className='block '>Clients Say </span></h1>
-  <p>Work On...</p>
-</div>
-</section>
+        <p className="font-cabin text-gray-600 text-lg leading-relaxed text-center mb-10"> {`"${text}"`}</p>
 
+        <div className="flex items-center justify-center space-x-4">
+          <img
+            src={image}
+            alt={name}
+            className="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 lg:w-20 lg:h-20 rounded-full object-cover shadow-md"
+          />
+
+          <div className="text-left">
+            <h4 className="font-cabin text-2xl font-semibold text-gray-600">{name}</h4>
+            <p className="font-quicksand text-sm italic text-gray-600">{title}</p>
+          </div>
+        </div>
+      </div>
+
+      {/* Arrows */}
+      <button
+        className="absolute left-4 lg:left-10 top-1/2 transform -translate-y-1/2 sm:bg-transparent lg:bg-white p-3 rounded-full shadow-md hover:bg-gray-100 transition"
+        onClick={handlePrev}
+      >
+        <ChevronLeft size={24} />
+      </button>
+      <button
+        className="absolute right-4 lg:right-10 top-1/2 transform -translate-y-1/2 sm:bg-transparent lg:bg-white p-3 rounded-full shadow-md hover:bg-gray-100 transition"
+        onClick={handleNext}
+      >
+        <ChevronRight size={24} />
+      </button>
+    </section>
 {/* what our client say end */}
 
+
+{/* FAQ START */}
+
+ <section className="py-16 px-4 sm:px-6 lg:px-24 bg-white ">
+      <div className=" text-center mb-12">
+        <p className="font-cabin text-xs lg:text-base text-gray-600  font-semibold uppercase mb-2">
+          Frequently Ask Question
+        </p>
+        <h2 className="text-blue-950 font-saira text-4xl lg:text-6xl font-bold">
+          Your Questions, <span className=" text-gray-600">Answered!</span>
+        </h2>
+      </div>
+
+      <div className="grid md:grid-cols-2 gap-6 max-w-6xl mx- z-20 ">
+        {faqs.map((faq, index) => (
+          <div  
+            key={index}
+            className={`rounded-xl p-6 shadow-md transition border ${
+              activeIndex === index
+                ? " border-gray-600 bg-gray-50" 
+                : "bg-white border"
+            }`}
+          >
+            <div className="flex justify-between items-center ">
+              <p
+                className={`font-cabin text-base lg:text-base font-medium ${
+                  activeIndex === index ? " text-blue-950" : "text-blue-950"
+                }`}
+              >
+                {faq.question}
+              </p>
+              <button
+                onClick={() => handleToggle(index)}
+                className="text-xl lg:text-2xl font-extrabold text-gray-600"
+              >
+                {activeIndex === index ? "-" : "+"}
+              </button>
+            </div>
+
+            {/* Only render answer if active */}
+            {activeIndex === index && (
+              <p className="font-cabin mt-4 text-sm text-gray-700">{faq.answer}</p>
+            )}
+
+          </div>
+        ))}
+      </div>
+    </section>
+
+{/* FAQ END */}
 
 
 
