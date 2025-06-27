@@ -501,14 +501,14 @@ const testimonials = [
  <section className="py-16 px-4 sm:px-6 lg:px-24 bg-white ">
       <div className=" text-center mb-12">
         <p className="font-cabin text-xs lg:text-base text-gray-600  font-semibold uppercase mb-2">
-          Frequently Ask Question
+          Frequently Asked Questions
         </p>
         <h2 className="text-blue-950 font-saira text-4xl lg:text-6xl font-bold">
           Your Questions, <span className=" text-gray-600">Answered!</span>
         </h2>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-6 max-w-6xl mx- z-20 ">
+      <div className="grid md:grid-cols-2 gap-6 max-w-6xl mx-3 z-20 ">
         {faqs.map((faq, index) => (
           <div  
             key={index}
@@ -518,6 +518,7 @@ const testimonials = [
                 : "bg-white border"
             }`}
           >
+            
             <div className="flex justify-between items-center ">
               <p
                 className={`font-cabin text-base lg:text-base font-medium ${
@@ -542,7 +543,7 @@ const testimonials = [
           </div>
         ))}
       </div>
-    </section>
+ </section>
 
 {/* FAQ END */}
 

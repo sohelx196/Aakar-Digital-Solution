@@ -1,11 +1,40 @@
-import React from 'react';
+
+
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
+
+
 import arrow from '../assets/Images/arrowIcon.png';
  import locationIcon from '../assets/Images/icons/location.svg';
  import phone from '../assets/Images/icons/telephone.svg';
 import website from '../assets/Images/icons/website.svg';
 import bgPattern from '../assets/Images/contactDesign.png';
 import contactImg from '../assets/Images/contactImg.jpg';
+
+
+
 function Contact() {
+
+const form = useRef();
+
+const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm('service_6khgvya', 'template_wqla8ez', form.current, {
+        publicKey: 'XYqPNAKVxyILNqOe1',
+      })
+      .then(
+        () => {
+          console.log('SUCCESS!');
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        },
+      );
+  };
+
+
   return (
     <>
 <section className="bg-white py-20 px-6 md:px-12">
@@ -22,13 +51,14 @@ function Contact() {
 
     {/* Right Side - Form */}
     <div>
-      <h1 className="text-4xl md:text-5xl font-medium font-cabin text-center md:text-left mb-12">
+      <h1 className="font-saira text-4xl md:text-5xl font-bold  text-center md:text-left mb-12">
         <span className="text-gray-700">Get in touch </span>
-        <span>with us.</span>
+        <span className='text-blue-950'>with us.</span>
       </h1>
 
-      <form action="#" className="space-y-8">
+      <form ref={form} onSubmit={sendEmail} action="#" className="space-y-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          
           <input
             name='name'
             type="text"
@@ -36,6 +66,7 @@ function Contact() {
             className="border border-gray-300 p-4 rounded-md font-cabin focus:outline-none focus:ring-2 focus:ring-gray-400"
             required
           />
+
           <input
             name='address'
             type="text"
@@ -88,12 +119,12 @@ function Contact() {
 
 
  <section
-      className="bg-cover bg-center py-10 px-4 "
-      style={{ backgroundImage: `url(${bgPattern})` }}
-    >
+      className="bg-cover bg-center py-10 px-4 "  
+      style={{ backgroundImage: `url(${bgPattern})` }}>
+
       <div className="max-w-4xl mx-auto text-center">
-        <p className="font-quicksand text-gray-700 text-base font-medium mb-2">Our Contact Detail</p>
-        <h2 className="font-quicksand text-3xl md:text-4xl font-bold mb-12">Have a <span className='text-gray-700'>Question?</span></h2>
+        <p className="font-cabin text-gray-700 text-base font-medium mb-2">Our Contact Detail</p>
+        <h2 className="font-saira text-3xl md:text-5xl font-bold mb-12 text-blue-950">Have a <span className='text-gray-700'>Question?</span></h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Address */}
@@ -117,6 +148,8 @@ function Contact() {
         </div>
       </div>
     </section>
+
+
     </>
 
     
