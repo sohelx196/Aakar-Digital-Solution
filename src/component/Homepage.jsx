@@ -508,7 +508,7 @@ const testimonials = [
         </h2>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-6 max-w-6xl mx-3 z-20 ">
+      <div className="grid md:grid-cols-2 gap-6 max-w-6xl  z-20 ">
         {faqs.map((faq, index) => (
           <div  
             key={index}

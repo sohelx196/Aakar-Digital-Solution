@@ -1,12 +1,10 @@
-
-
 import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 
 
 import arrow from '../assets/Images/arrowIcon.png';
- import locationIcon from '../assets/Images/icons/location.svg';
- import phone from '../assets/Images/icons/telephone.svg';
+import locationIcon from '../assets/Images/icons/location.svg';
+import phone from '../assets/Images/icons/telephone.svg';
 import website from '../assets/Images/icons/website.svg';
 import bgPattern from '../assets/Images/contactDesign.png';
 import contactImg from '../assets/Images/contactImg.jpg';
@@ -20,20 +18,23 @@ const form = useRef();
 const sendEmail = (e) => {
     e.preventDefault();
 
+    const serviceId = "service_6khgvya";
+    const tempId = "template_wqla8ez";
+    const publicKey = "XYqPNAKVxyILNqOe1";
+    
     emailjs
-      .sendForm('service_6khgvya', 'template_wqla8ez', form.current, {
-        publicKey: 'XYqPNAKVxyILNqOe1',
+      .sendForm(serviceId, tempId , form.current, {
+       publicKey,
       })
       .then(
         () => {
-          console.log('SUCCESS!');
+          console.log('Form Is submitted Successfully!!');
         },
         (error) => {
-          console.log('FAILED...', error.text);
+          console.log('Failed...Try Again!', error.text);
         },
       );
   };
-
 
   return (
     <>
@@ -56,7 +57,7 @@ const sendEmail = (e) => {
         <span className='text-blue-950'>with us.</span>
       </h1>
 
-      <form ref={form} onSubmit={sendEmail} action="#" className="space-y-8">
+      <form ref={form} onSubmit={sendEmail} className="space-y-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           
           <input
@@ -108,8 +109,8 @@ const sendEmail = (e) => {
             <img
               src={arrow}
               alt="arrow"
-              className="w-3 h-3 transition-transform duration-300 group-hover:rotate-45 inline ml-2"
-            />
+              className="w-3 h-3 transition-transform duration-300 group-hover:rotate-45 inline ml-2"/>
+
           </button>
         </div>
       </form>
@@ -147,7 +148,7 @@ const sendEmail = (e) => {
           </div>
         </div>
       </div>
-    </section>
+ </section>
 
 
     </>
