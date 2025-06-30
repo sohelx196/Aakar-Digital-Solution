@@ -54,6 +54,7 @@ function Footer() {
           <img src={whatsapp} alt="WhatsApp" className=" w-5 h-5 cursor-pointer hover:opacity-70 transition" />
         </div>
       </div>
+
     </footer>
   );
 }

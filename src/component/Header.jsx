@@ -9,7 +9,7 @@ function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="bg-white sticky top-0 z-50 w-full ">
+    <header className="bg-white/70 backdrop-blur-sm shadow-md fixed top-0 w-full z-50 ">
       <div className="max-w-7xl mx-auto px-4 md:px-0 py-2 flex items-center justify-between">
         {/* Logo */}
         <div className="flex-shrink-0">
@@ -33,7 +33,10 @@ function Header() {
         <div className="hidden md:block">
           <Link
             to="/contact"
-            className="font-quicksand hover:border border-gray-700 border-b-4 text-black font-semibold px-4 py-2 rounded-xl border hover:shadow-md hover:scale-105 transition-all duration-100">
+            className="font-quicksand hover:border border-gray-700 
+            border-b-4 font-semibold  border 
+            hover:shadow-md   duration-100
+            bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-4 py-2 rounded-lg shadow hover:scale-105 transition-all">
 
             Contact Us
           </Link>
@@ -59,8 +62,9 @@ function Header() {
           <Link
             to="/contact"
             onClick={() => setMenuOpen(false)}
-            className="font-quicksand block hover:border border-gray-700 border-b-4 text-black font-semibold px-4 py-2 rounded-xl border hover:shadow-md hover:scale-105 transition-all duration-100"
-          >
+            className="font-quicksand block hover:border border-gray-700 border-b-4 
+            text-black font-semibold px-4 py-2 rounded-xl border 
+            hover:shadow-md hover:scale-105 transition-all duration-100">
             Contact Us
           </Link>
         </div>

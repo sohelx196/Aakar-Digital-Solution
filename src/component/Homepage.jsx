@@ -1,7 +1,7 @@
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-import  { useState } from 'react';
+import  { useState , useRef } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 import { useEffect } from 'react';
@@ -23,7 +23,10 @@ import productImg3 from '../assets/Images/officeImg.jpeg';
 
 import whyChooseImg from '../assets/Images/officeImg.jpeg';
 
-
+import poster from '../assets/Images/poster.jpg'
+import businessCard from '../assets/Images/businessCard.jpg'
+import report from '../assets/Images/report.jpg'
+import banner from '../assets/Images/banner.jpg'
 
 
 function Homepage() {
@@ -36,12 +39,12 @@ function Homepage() {
 }, []);
 
 const products = [
-  { title: 'BUSINESS CARDS', img: productImg1 },
+  { title: 'BUSINESS CARDS', img: businessCard },
   { title: 'FLYERS', img: productImg2 },
-  { title: 'BANNER', img: productImg3 },
+  { title: 'BANNER', img: banner },
   { title: 'SOCIAL MEDIA', img: productImg1 },
-  { title: 'POSTERS', img: productImg2 },
-  { title: 'BANNER', img: productImg3 },
+  { title: 'POSTERS', img: poster },
+  { title: 'Report Card', img: report },
 ];
 
 const testimonials = [
@@ -121,16 +124,30 @@ const testimonials = [
   };
 // faq end
 
+const scrollRef = useRef(null);
 
+  useEffect(() => {
+    const container = scrollRef.current;
+    let scrollPos = 0;
+    const interval = setInterval(() => {
+      if (!container) return;
+      const cardWidth = container.firstChild?.offsetWidth || 300;
+      scrollPos += cardWidth;
+      if (scrollPos >= container.scrollWidth) scrollPos = 0;
+      container.scrollTo({ left: scrollPos, behavior: "smooth" });
+    }, 3000); // every 3 seconds
+
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <>
-<section className="lg:min-h-screen flex flex-col-reverse md:flex-row items-center justify-between px-6 md:px-20 bg-gradient-to-br from-[#2d4048] to-[#132a45] text-white py-12 overflow-x-hidden">
+<section className="pt-28  lg:pt-32  lg:min-h-screen flex flex-col-reverse md:flex-row items-center justify-between px-6 md:px-20 bg-gradient-to-br from-[#2d4048] to-[#132a45] text-white py-12 overflow-x-hidden">
   
   {/* Left Content */}
   <div className="w-full md:w-1/2 text-center md:text-left space-y-6 mt-8 md:mt-0">
     <h1 className="font-saira text-3xl sm:text-4xl md:text-6xl lg:text-8xl font-bold leading-tight">
-      AAKAR <span>DIGITAL</span> <span>SOLUTION</span>
+      AAKAR <span className=''>DIGITAL</span> <span>SOLUTION</span>
     </h1>
     <p className="text-sm sm:text-base md:text-lg lg:text-xl font-quicksand">
       The Exclusive printing shoppe
@@ -147,7 +164,8 @@ const testimonials = [
     <img
       src={heroImg}
       alt="Hero Section"
-      className="w-[240px] sm:w-[300px] md:w-[500px] lg:w-[600px] rounded-xl"
+      className="w-[240px] sm:w-[300px] md:w-[500px] lg:w-[600px] rounded-xl
+       scale-95 transition duration-700 hover:scale-100"
     />
   </div>
 </section>
@@ -197,13 +215,13 @@ const testimonials = [
      {/* about us end */}
 
 {/* Service start */}
-<section className=" flex items-center justify-center px-6 py-16 m-5 rounded-3xl">
-  <div className="text-center font-saira space-y-4" data-aos="fade-right">
+<section className="bg-[#f9fafb]  flex items-center justify-center px-6 py-16 m-5 rounded-3xl">
+  <div className="text-center font-saira space-y-4" >
 
     <h1
-      className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-gray-800 font-bold leading-tight">
-      THE<span className="block">SERVICES</span>
-      <span className="block">WE OFFER</span>
+      className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-gray-600 font-bold leading-tight">
+      <span data-aos="fade-left"  >THE </span><span data-aos="fade-right" className="text-blue-950 ">SERVICES</span>
+      <span  data-aos="fade-left" className="block"><span>WE</span> OFFER</span>
     </h1>
 
     <p
@@ -212,6 +230,7 @@ const testimonials = [
       Empowering Your Brand Through Design, Publishing & Digital Innovation
     </p>
 
+    <div className="w-20 h-1 bg-gray-600 mx-auto my-6 rounded-full"></div>
   </div>
 </section>
 
@@ -231,7 +250,7 @@ const testimonials = [
         {/* Right Text */}
         <div className="w-full md:w-1/2 space-y-6 text-center md:text-left" data-aos="fade-left">
           <h2 className="text-gray-600 font-saira text-4xl sm:text-5xl lg:text-8xl font-bold leading-tight">
-            GRAPHIC <span className='block'>DESGIN</span>
+            GRAPHIC <span className='block text-blue-950'>DESIGN</span>
           </h2>
           <p className="text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed font-quicksand">
             At Aakar Digital Solutions, we create visually compelling designs that capture your brand’s essence.
@@ -253,7 +272,7 @@ const testimonials = [
     {/* Left Content */}
     <div className="w-full md:w-1/2 space-y-6 text-center md:text-left" data-aos="fade-right">
       <h2 className="text-gray-600 font-saira text-4xl sm:text-5xl lg:text-8xl font-bold leading-tight">
-        WEB <span className="block">DESIGN</span>
+        WEB <span className="block text-blue-950">DESIGN</span>
       </h2>
       <p className="text-sm sm:text-base md:text-lg leading-relaxed font-quicksand text-gray-700 max-w-xl mx-auto md:mx-0">
         At Aakar Digital Solutions, we design modern, responsive websites that not only look great but also
@@ -293,7 +312,7 @@ const testimonials = [
         {/* Right Content */}
         <div className="w-full md:w-1/2 space-y-6 text-center md:text-left" data-aos="fade-left">
           <h2 className="text-gray-600 font-saira text-4xl sm:text-5xl lg:text-8xl font-bold leading-tight">
-            SOFTWARE <span className="block">SOLUTION</span>
+            SOFTWARE <span className="block text-blue-950">SOLUTION</span>
           </h2>
           <p className="text-sm sm:text-base md:text-lg font-quicksand text-gray-700 leading-relaxed max-w-xl mx-auto md:mx-0">
           At Aakar Digital Solutions, we craft smart, scalable software that simplifies your workflow and drives business growth. From web apps to enterprise tools, our solutions blend innovation, usability, and performance to deliver real results.
@@ -312,7 +331,7 @@ const testimonials = [
     {/* Left Content */}
     <div className="w-full md:w-1/2 space-y-6 text-center md:text-left" data-aos="fade-right">
       <h2 className="text-gray-600 font-saira text-4xl sm:text-5xl lg:text-8xl font-bold leading-tight">
-        MOBILE &nbsp;APP <span className="block">DEVELOPMENT</span>
+        MOBILE &nbsp;APP <span className="block text-blue-950">DEVELOPMENT</span>
       </h2>
       <p className="text-sm sm:text-base md:text-lg text-gray-700 leading-relaxed font-quicksand max-w-xl mx-auto md:mx-0">
         At Aakar Digital Solutions, we develop powerful, user-friendly mobile apps that deliver seamless experiences across all devices. From idea to launch, we ensure your app is innovative, efficient, and built to scale.
@@ -349,7 +368,7 @@ const testimonials = [
         {/* Right Content */}
         <div className="w-full md:w-1/2 space-y-6 text-center md:text-left" data-aos="fade-left">
           <h2 className="text-gray-600 font-saira text-4xl sm:text-5xl lg:text-8xl font-bold leading-tight">
-            DIGITAL <span className="block">MARKETING</span>
+            DIGITAL <span className="block text-blue-950">MARKETING</span>
           </h2>
           <p className="text-sm sm:text-base md:text-lg font-quicksand text-gray-700 leading-relaxed max-w-xl mx-auto md:mx-0">
           At Aakar Digital Solutions, our digital marketing services are designed to boost your online presence and connect you with the right audience. From social media management to targeted ad campaigns and SEO strategies, we combine creativity with data-driven insights to help your brand grow in the digital world.
@@ -364,42 +383,52 @@ const testimonials = [
 
 
 {/* our product start */}
+    
+ <section className="bg-[#1e1145] py-16 px-4 sm:px-10 lg:px-20">
+  {/* Heading without underline */}
+  <h2 className="text-center text-white font-saira font-extrabold text-4xl sm:text-5xl md:text-6xl">
+    OUR PRODUCTS
+  </h2>
 
-    <section className="bg-[#1e1145] py-16 px-6 sm:px-10 lg:px-20 h-content">
-      <h2 className="mb-24 font-saira text-center text-white font-bold text-4xl sm:text-5xl md:text-6xl lg:text-8xl  ">
-        OUR PRODUCTS
-      </h2>
-      
+  {/* Auto-scrollable card container */}
+  <div
+    ref={scrollRef}
+    className="mt-16 flex overflow-x-auto snap-x snap-mandatory scroll-smooth"
+    style={{ scrollBehavior: "smooth" }}
+  >
+    {products.map((product, index) => (
+      <div
+        key={index}
+        className="min-w-full snap-center flex justify-center px-4"
+      >
+        {/* Card */}
+        <div className="w-full max-w-4xl bg-white rounded-3xl overflow-hidden shadow-xl transition-all duration-300 group hover:shadow-purple-500">
+          <img
+            src={product.img}
+            alt={product.title}
+            className="w-full h-[400px] "
+          />
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12 place-items-center">
-        {products.map((product, index) => (
-          
-          <div
-            data-aos="fade-up"
-            key={index}
-            className="hover:rotate relative w-72 h-96 rounded-[20px] overflow-hidden  group shadow-sm shadow-white hover:shadow-md hover:transition-all " >
-            <img
-              src={product.img}
-              alt={product.title}
-              className="w-full h-full object-cover "/>
-
-            <div className="absolute inset-0 bg-gradient-to-t from-[#000000bb] via-[#00000055] to-transparent flex flex-col justify-end items-center p-6">
-
-              <h3 className="text-white font-bold text-2xl tracking-wide text-center mb-4 font-quicksand">
-                {product.title}
-              </h3>
-
-              <button className="text-xs sm:text-sm md:text-base lg:text-sm font-cabin hover:bg-transparent hover:text-white   font-semibold px-4 py-2 rounded-xl border hover:shadow-md transition-all bg-gray-200 text-black duration-100 ">
-                <Link to='/aakarDigitalProduct'>View More</Link>
-              </button>
-
+          <div className="p-8">
+            <h3 className="text-center text-3xl font-bold text-[#1e1145] mb-4 font-quicksand">
+              {product.title}
+            </h3>
+            <div className="flex justify-center">
+              <Link to="/aakarDigitalProduct">
+                <button className="px-6 py-3 text-lg rounded-lg bg-[#1e1145] text-white hover:bg-white hover:text-[#1e1145] border border-[#1e1145] transition-all duration-200 font-semibold">
+                  View More
+                </button>
+              </Link>
             </div>
 
           </div>
           
-        ))}
+        </div>
       </div>
-    </section>
+    ))}
+  </div>
+</section>
+
 
 {/* our product end */}
 
