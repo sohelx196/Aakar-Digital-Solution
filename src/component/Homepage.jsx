@@ -27,6 +27,7 @@ import poster from '../assets/Images/poster.jpg'
 import businessCard from '../assets/Images/businessCard.jpg'
 import report from '../assets/Images/report.jpg'
 import banner from '../assets/Images/banner.jpg'
+import DarkVariantExample from '../assets/feature/DarkVariantExample';
 
 
 function Homepage() {
@@ -39,11 +40,11 @@ function Homepage() {
 }, []);
 
 const products = [
+  { title: 'POSTERS', img: poster },
   { title: 'BUSINESS CARDS', img: businessCard },
   { title: 'FLYERS', img: productImg2 },
   { title: 'BANNER', img: banner },
   { title: 'SOCIAL MEDIA', img: productImg1 },
-  { title: 'POSTERS', img: poster },
   { title: 'Report Card', img: report },
 ];
 
@@ -124,6 +125,7 @@ const testimonials = [
   };
 // faq end
 
+
 const scrollRef = useRef(null);
 
   useEffect(() => {
@@ -135,7 +137,7 @@ const scrollRef = useRef(null);
       scrollPos += cardWidth;
       if (scrollPos >= container.scrollWidth) scrollPos = 0;
       container.scrollTo({ left: scrollPos, behavior: "smooth" });
-    }, 3000); // every 3 seconds
+    }, 3000); 
 
     return () => clearInterval(interval);
   }, []);
@@ -177,6 +179,7 @@ const scrollRef = useRef(null);
 <section className="min-h-screen bg-white text-white px-6 md:px-20 py-16 flex flex-col md:flex-row items-center justify-center gap-12">
   {/* Image Left Side */}
   <div className="md:w-1/2 flex justify-center">
+  
     <img
       src={aboutImg}
       alt="About us"
@@ -386,7 +389,7 @@ const scrollRef = useRef(null);
     
  <section className="bg-[#1e1145] py-16 px-4 sm:px-10 lg:px-20">
   {/* Heading without underline */}
-  <h2 className="text-center text-white font-saira font-extrabold text-4xl sm:text-5xl md:text-6xl">
+  <h2 className="text-center text-white font-saira font-extrabold text-4xl sm:text-5xl md:text-7xl">
     OUR PRODUCTS
   </h2>
 
@@ -397,38 +400,42 @@ const scrollRef = useRef(null);
     style={{ scrollBehavior: "smooth" }}
   >
     {products.map((product, index) => (
-      <div
-        key={index}
-        className="min-w-full snap-center flex justify-center px-4"
-      >
-        {/* Card */}
-        <div className="w-full max-w-4xl bg-white rounded-3xl overflow-hidden shadow-xl transition-all duration-300 group hover:shadow-purple-500">
-          <img
-            src={product.img}
-            alt={product.title}
-            className="w-full h-[400px] "
-          />
+  <div className='min-w-full flex justify-center '>
+      <DarkVariantExample 
+      product={product.img}
+      alt={product.title}/>
+  </div>
+      // <div
+      //   key={index}
+      //   className="min-w-full snap-center flex justify-center px-4"
+      // >
+      //   {/* Card */}
+      //   <div className="w-full max-w-4 bg-white rounded-3xl overflow-hidden shadow-xl transition-all duration-300 group hover:shadow-purple-500">
+      //     <img
+      //       src={product.img}
+      //       alt={product.title}
+      //       className="w-full h-[400px] "
+      //     />
 
-          <div className="p-8">
-            <h3 className="text-center text-3xl font-bold text-[#1e1145] mb-4 font-quicksand">
-              {product.title}
-            </h3>
-            <div className="flex justify-center">
-              <Link to="/aakarDigitalProduct">
-                <button className="px-6 py-3 text-lg rounded-lg bg-[#1e1145] text-white hover:bg-white hover:text-[#1e1145] border border-[#1e1145] transition-all duration-200 font-semibold">
-                  View More
-                </button>
-              </Link>
-            </div>
+      //     <div className="p-8">
+      //       <h3 className="text-center text-3xl font-bold text-[#1e1145] mb-4 font-quicksand">
+      //         {product.title}
+      //       </h3>
+      //       <div className="flex justify-center">
+      //         <Link to="/aakarDigitalProduct">
+      //           <button className="px-6 py-3 text-lg rounded-lg bg-[#1e1145] text-white hover:bg-white hover:text-[#1e1145] border border-[#1e1145] transition-all duration-200 font-semibold">
+      //             View More
+      //           </button>
+      //         </Link>
+      //       </div>
 
-          </div>
+      //     </div>
           
-        </div>
-      </div>
+      //   </div>
+      // </div>
     ))}
   </div>
 </section>
-
 
 {/* our product end */}
 

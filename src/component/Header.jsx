@@ -13,11 +13,13 @@ function Header() {
       <div className="max-w-7xl mx-auto px-4 md:px-0 py-2 flex items-center justify-between">
         {/* Logo */}
         <div className="flex-shrink-0">
+          <Link to="/">
           <img
             src={aakarLogo}
             alt="Aakar Digital Solution Logo"
             className="w-36 h-auto"
           />
+          </Link>
         </div>
 
         {/* Center Nav Links */}
