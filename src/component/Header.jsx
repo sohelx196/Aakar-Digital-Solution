@@ -38,8 +38,7 @@ function Header() {
             className="font-quicksand hover:border border-gray-700 
             border-b-4 font-semibold  border 
             hover:shadow-md   duration-100
-            bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-4 py-2 rounded-lg shadow hover:scale-105 transition-all">
-
+            bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-4 py-2 rounded-lg shadow hover:scale-105 transition-all">
             Contact Us
           </Link>
         </div>
@@ -60,6 +59,7 @@ function Header() {
           <Link to="aakarGraphics" onClick={() => setMenuOpen(false)} className="font-quicksand block py-2 text-base font-semibold transition-all duration-300 transform hover:-translate-y-1">Aakar Graphics</Link>
           <Link to="aakarPrakashan" onClick={() => setMenuOpen(false)} className="font-quicksand block py-2 text-base font-semibold transition-all duration-300 transform hover:-translate-y-1">Aakar Prakashan</Link>
           <Link to="aakarDigitalProduct" onClick={() => setMenuOpen(false)} className="font-quicksand block py-2 text-base font-semibold transition-all duration-300 transform hover:-translate-y-1">Aakar Digital Product</Link>
+          
           <Link to="aakarWebAndSoftware" onClick={() => setMenuOpen(false)} className="font-quicksand block py-2 text-base font-semibold transition-all duration-300 transform hover:-translate-y-1">Aakar Web & Software</Link>
           <Link
             to="/contact"
@@ -69,6 +69,7 @@ function Header() {
             hover:shadow-md hover:scale-105 transition-all duration-100">
             Contact Us
           </Link>
+          
         </div>
       )}
     </header>
