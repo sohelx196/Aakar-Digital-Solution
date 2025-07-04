@@ -146,32 +146,40 @@ const scrollRef = useRef(null);
   return (
     <>
 
-<section className="pt-28  lg:pt-32  lg:min-h-screen flex flex-col-reverse md:flex-row items-center justify-between px-6 md:px-20 bg-gradient-to-br from-[#2d4048] to-[#132a45] text-white py-12 overflow-x-hidden">
-  
-  {/* Left Content */}
-  <div className="w-full md:w-1/2 text-center md:text-left space-y-6 mt-8 md:mt-0">
-    <h1  data-aos="fade-right"  className="font-saira text-3xl sm:text-4xl md:text-6xl lg:text-8xl font-bold leading-tight">
-     <span className='block'>AAKAR</span> <span className=''>DIG<span className='text-indigo-400 inline'>IT</span>AL</span> <span>SOLUTION</span>
-    </h1>
-    <p data-aos="fade-left" className="text-sm sm:text-base md:text-lg lg:text-xl font-quicksand ">
-      The Exclusive printing shoppe
-    </p>
-   <Link to='/Contact'>
-        <button className="mt-8 font-quicksand hover:border border-white border-b-4 text-white font-semibold px-4 py-2 rounded-xl border hover:shadow-md hover:scale-105 transition-all duration-100">
-          Contact Us
-        </button>
-  </Link>
-  </div>
+  <section className="pt-28  lg:pt-32  lg:min-h-screen flex flex-col-reverse md:flex-row items-center justify-between px-6 md:px-20 bg-gradient-to-br from-[#2d4048] to-[#132a45] text-white py-12 overflow-x-hidden">
+    
+    {/* Left Content */}
+    <div className="w-full md:w-1/2 text-center md:text-left space-y-6 mt-8 md:mt-0">
+        <p data-aos="fade-right" className="text-sm sm:text-base md:text-lg lg:text-lg font-quicksand ">
+        The Exclusive printing shoppe
+      </p>
+      
+      <h1  data-aos="fade-right"  className="font-saira text-4xl sm:text-4xl md:text-6xl lg:text-8xl font-bold">
+        <span className='block'>AAKAR</span> <span className=''>DIG<span className='text-indigo-400 inline'>IT</span>AL</span> <span>SOLUTION</span>
+      </h1>
+      <p data-aos="fade-left" className="text-lg sm:text-lg md:text-lg  lg:text-4xl font-saira ">
+        Powered by <span className='font-black'>Digital Computing®</span>
+      </p>
 
-  {/* Right Image (Shown First on Mobile) */}
-  <div className="w-full md:w-1/2 flex justify-center">
-    <img
-      src={heroImg}
-      alt="Hero Section"
-      className="w-[240px] sm:w-[300px] md:w-[500px] lg:w-[600px] rounded-xl
-       scale-95 transition duration-700 hover:scale-100"/>
-  </div>
-</section>
+  
+      
+    <Link to='/Contact'>
+          <button className="mt-8 font-quicksand hover:border border-white border-b-4 text-white font-semibold px-4 py-2 rounded-xl border hover:shadow-md hover:scale-105 transition-all duration-100">
+            Contact Us
+          </button>
+    </Link>
+
+    </div>
+
+    {/* Right Image (Shown First on Mobile) */}
+    <div className="w-full md:w-1/2 flex justify-center">
+      <img
+        src={heroImg}
+        alt="Hero Section"
+        className="w-[240px] sm:w-[300px] md:w-[500px] lg:w-[600px] rounded-xl
+        scale-95 transition duration-700 hover:scale-100"/>
+    </div>
+  </section>
 
 
   
