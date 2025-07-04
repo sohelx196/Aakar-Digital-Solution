@@ -29,7 +29,7 @@ import report from '../assets/Images/report.jpg'
 import banner from '../assets/Images/banner.jpg'
 import DarkVariantExample from '../feature/DarkVariantExample';
 
-
+import malikenPatel from '../assets/Images/OurClient/malikenPatel.jpg'
 
 function Homepage() {
 
@@ -51,9 +51,9 @@ const products = [
 
 const testimonials = [
   {
-    name: "Sacha Dubois",
-    title: "Social media influencer",
-    image: "https://i.pravatar.cc/100?img=1", 
+    name: "Dr. Maliken Patel",
+    title: "Doctor",
+    image: malikenPatel, 
     text:   " lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
   },
   {
@@ -445,10 +445,7 @@ const scrollRef = useRef(null);
             Why Clients Choose Us?
             </p>
             <h2 className="font-saira font-semibold text-4xl sm:text-5xl lg:text-6xl text-[#0F2B59]  text-center md:text-left">
-              We promise high
-              <span className="block  lg:mt-3">
-                quality <span className="text-gray-600">It Solution</span>
-              </span>
+             Excellence in every  <span className="lg:mt-3 text-gray-600"> digital solution</span>
             </h2>
 
             {/* Overlapping Box */}

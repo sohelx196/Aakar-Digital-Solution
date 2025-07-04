@@ -90,7 +90,7 @@
     {/* Image */}
     <div className="md:w-1/2 " data-aos="zoom-out">
       <img
-        src={graphicImg} // Replace with a different overview image if needed
+        src={graphicImg} 
         alt="Aakar Overview"
         className="rounded-xl w-full  md:h-80 object-contain"
       />
@@ -118,10 +118,10 @@
               <img
                 src={service.image}
                 alt={service.title}
-                className="w-full md:w-1/2 border border-yellow-300 rounded-xl shadow-lg object-content h-64 md:h-80"
+                className="w-full lg:w-1/2 border border-yellow-300 rounded-xl shadow-lg object-content h-72 md:h-96"
               />
 
-              <div data-aos="zoom-in" className="md:w-1/2 ">
+              <div data-aos="zoom-in" className="md:w-1/2 text-center ">
                 <h3 className="font-saira font-extrabold  text-2xl sm:text-3xl lg:text-6xl  mb-1 text-gray-600">{service.title}</h3>
                 <p className="text-blue-950 font-quicksand font-black  text-lg sm:text-lg ">
                   {service.description}
