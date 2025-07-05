@@ -54,19 +54,19 @@ const testimonials = [
     name: "Dr. Maliken Patel",
     title: "Doctor",
     image: malikenPatel, 
-    text:   " lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
+    text:   "Consult Aakar Graphics when your brand needs critical care — design that heals, visuals that speak."
   },
   {
     name: "Itsuki Takahashi",
     title: "Founder, KNJ Label",
     image: "https://i.pravatar.cc/100?img=2",
-    text: " lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
+    text: "Your brand’s health starts with a strong visual diagnosis — Aakar Graphics has the perfect prescription."
   },
   {
     name: "Vanna Trinh",
     title: "President, The Plew",
     image: "https://i.pravatar.cc/100?img=3",
-    text: " lorem20 ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
+    text: "From symptoms of dull designs to a full creative recovery — trust Aakar for graphic therapy."
   }
 ];
 
@@ -146,31 +146,37 @@ const scrollRef = useRef(null);
   return (
     <>
 
-  <section className="pt-28  lg:pt-32  lg:min-h-screen flex flex-col-reverse md:flex-row items-center justify-between px-6 md:px-20 bg-gradient-to-br from-[#2d4048] to-[#132a45] text-white py-12 overflow-x-hidden">
+  <section className="pt-28  lg:pt-32  lg:min-h-screen flex flex-col-reverse md:flex-row items-center justify-between px-6 md:px-20 bg-[#2b1d49] text-white py-12 overflow-x-hidden">
     
     {/* Left Content */}
-    <div className="w-full md:w-1/2 text-center md:text-left space-y-6 mt-8 md:mt-0">
-        <p data-aos="fade-right" className="text-sm sm:text-base md:text-lg lg:text-lg font-quicksand ">
-        The Exclusive printing shoppe
-      </p>
-      
-      <h1  data-aos="fade-right"  className="font-saira text-4xl sm:text-4xl md:text-6xl lg:text-8xl font-bold">
-        <span className='block'>AAKAR</span> <span className=''>DIG<span className='text-indigo-400 inline'>IT</span>AL</span> <span>SOLUTION</span>
-      </h1>
+ <div className="w-full md:w-1/2 text-center md:text-left space-y-6 mt-8 md:mt-0">
 
-      <p  data-aos="fade-left" className="text-2xl sm:text-lg md:text-lg  lg:text-4xl font-saira ">
-        Powered by <span className='font-black'>Digital Computing®</span>
-      </p>
+  <p data-aos="fade-right" className="text-sm sm:text-base md:text-lg lg:text-lg font-quicksand ">
+    The Exclusive printing shoppe
+  </p>
 
   
-      
-    <Link to='/Contact'>
-          <button className="mt-8 font-quicksand hover:border border-white border-b-4 text-white font-semibold px-4 py-2 rounded-xl border hover:shadow-md hover:scale-105 transition-all duration-100">
-            Contact Us
-          </button>
-    </Link>
+  <h1  className="font-saira text-4xl sm:text-4xl md:text-6xl lg:text-8xl font-bold leading-tight">
 
-    </div>
+    <span data-aos="fade-right" className='block'>
+    <span className='block'>AAKAR</span> 
+    <span>DIG<span className='text-indigo-400 inline'>IT</span>AL</span> <span>SOLUTION</span>
+    </span>
+    
+
+    <span data-aos="fade-left" className="block text-xl sm:text-xl lg:text-4xl font-normal lg:mt-2 mt-1">
+      Powered by <span className='font-black'>Digital Computing®</span>
+    </span>
+  </h1>
+
+  <Link to='/Contact'>
+    <button className="mt-10 font-quicksand hover:border border-white border-b-4 text-white font-semibold px-4 py-2 rounded-xl border hover:shadow-md hover:scale-105 transition-all duration-100">
+        Get in Touch Now
+    </button>
+  </Link>
+
+</div>
+
 
     {/* Right Image (Shown First on Mobile) */}
     <div className="w-full md:w-1/2 flex justify-center">
@@ -397,7 +403,7 @@ const scrollRef = useRef(null);
 
 {/* our product start */}
     
-<section className="bg-[#1e1145] py-16 px-4 sm:px-10 lg:px-20 overflow-hidden"> {/* added overflow-hidden */}
+<section className="bg-[#2b1d49] py-16 px-4 sm:px-10 lg:px-20 overflow-hidden"> {/* added overflow-hidden */}
   <h2 data-aos="zoom-in" className="text-center text-white font-saira font-extrabold text-4xl sm:text-5xl md:text-7xl">
     OUR PRODUCTS
   </h2>
@@ -483,87 +489,96 @@ const scrollRef = useRef(null);
            WHAT OUR <span className='text-blue-950'>CLIENTS SAY</span> 
         </h2>
 
-        <p className="font-cabin text-gray-600 text-lg leading-relaxed text-center mb-10"> {`"${text}"`}</p>
+<div key={text} className="animate-fade transition-all duration-500 ease-in-out">
+  <p className="font-cabin text-gray-600 text-lg leading-relaxed text-center mb-10">
+    "{text}"
+  </p>
 
-        <div className="flex items-center justify-center space-x-4">
-          <img
-            src={image}
-            alt={name}
-            className="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 lg:w-20 lg:h-20 rounded-full object-cover shadow-md"
-          />
+  <div className="flex items-center justify-center space-x-4">
+    <img
+      src={image}
+      alt={name}
+      className="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 lg:w-20 lg:h-20 rounded-full object-cover shadow-md"
+    />
+    <div className="text-left">
+      <h4 className="font-cabin text-2xl font-semibold text-gray-600">{name}</h4>
+      <p className="font-quicksand text-sm italic text-gray-600">{title}</p>
+    </div>
+  </div>
+</div>
 
-          <div className="text-left">
-            <h4 className="font-cabin text-2xl font-semibold text-gray-600">{name}</h4>
-            <p className="font-quicksand text-sm italic text-gray-600">{title}</p>
-          </div>
-        </div>
+
       </div>
 
       {/* Arrows */}
       <button
         className="absolute left-4 lg:left-10 top-1/2 transform -translate-y-1/2 sm:bg-transparent lg:bg-white p-3 rounded-full shadow-md hover:bg-gray-100 transition"
-        onClick={handlePrev}
-      >
+        onClick={handlePrev}>
         <ChevronLeft size={24} />
       </button>
+
       <button
         className="absolute right-4 lg:right-10 top-1/2 transform -translate-y-1/2 sm:bg-transparent lg:bg-white p-3 rounded-full shadow-md hover:bg-gray-100 transition"
-        onClick={handleNext}
-      >
+        onClick={handleNext}>    
         <ChevronRight size={24} />
       </button>
+
     </section>
 {/* what our client say end */}
 
 
 {/* FAQ START */}
 
- <section className="py-16 px-4 sm:px-6 lg:px-24 bg-white ">
-      <div className=" text-center mb-12">
-        <p className="font-cabin text-xs lg:text-base text-gray-600  font-semibold uppercase mb-2">
-          Frequently Asked Questions
-        </p>
-        <h2 className="text-blue-950 font-saira text-4xl lg:text-6xl font-bold">
-          Your Questions, <span className=" text-gray-600">Answered!</span>
-        </h2>
-      </div>
+ <section className="py-16 items-center bg-white">
 
-      <div className="grid md:grid-cols-2 gap-6 max-w-6xl  z-20 ">
-        {faqs.map((faq, index) => (
-          <div  
-            key={index}
-            className={`rounded-xl p-6 shadow-md transition border ${
-              activeIndex === index
-                ? " border-gray-600 bg-gray-50" 
-                : "bg-white border"
-            }`}
+  <div className="text-center mb-12">
+    <p className="font-cabin text-xs lg:text-base text-gray-600 font-semibold uppercase mb-2">
+      Frequently Asked Questions
+    </p>
+    <h2 className="text-blue-950 font-saira text-4xl lg:text-6xl font-bold">
+      Your Questions, <span className="text-gray-600">Answered!</span>
+    </h2>
+  </div>
+
+
+  <div className="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto px-4 z-20">
+    {faqs.map((faq, index) => (
+      <div
+        key={index}
+        className={`rounded-xl p-6 shadow-md transition-all duration-300 ease-in-out border ${
+          activeIndex === index
+            ? "border-gray-600 bg-gray-50 scale-[1.02]"
+            : "bg-white border hover:shadow-lg  hover:scale-[1.03] hover:border-gray-600 "}`} >
+
+       
+        <div className="flex justify-between items-center">
+          <p
+            className={`font-cabin text-base lg:text-base font-medium w-full  ${
+              activeIndex === index ? "text-blue-950" : "text-blue-950"
+            }`}>
+            {faq.question}
+          </p>
+          <button
+            onClick={() => handleToggle(index)}
+            className="text-xl lg:text-2xl font-extrabold text-gray-600 ml-4"
           >
-            
-            <div className="flex justify-between items-center ">
-              <p
-                className={`font-cabin text-base lg:text-base font-medium ${
-                  activeIndex === index ? " text-blue-950" : "text-blue-950"
-                }`}
-              >
-                {faq.question}
-              </p>
-              <button
-                onClick={() => handleToggle(index)}
-                className="text-xl lg:text-2xl font-extrabold text-gray-600"
-              >
-                {activeIndex === index ? "-" : "+"}
-              </button>
-            </div>
+            {activeIndex === index ? "−" : "+"}
+          </button>
+        </div>
 
-            {/* Only render answer if active */}
-            {activeIndex === index && (
-              <p className="font-cabin mt-4 text-sm text-gray-700">{faq.answer}</p>
-            )}
-
-          </div>
-        ))}
+        {/* Answer */}
+        <div
+          className={`overflow-hidden transition-all duration-500 ease-in-out ${
+            activeIndex === index ? "max-h-40 mt-4 opacity-100" : "max-h-0 opacity-0"
+          }`}
+        >
+          <p className="font-cabin text-sm text-gray-700">{faq.answer}</p>
+        </div>
       </div>
- </section>
+    ))}
+  </div>
+</section>
+
 
 {/* FAQ END */}
 

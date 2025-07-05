@@ -18,7 +18,7 @@ function AakarDigitalProduct() {
             <span className="text-white">AAKAR</span> DIGITAL PRODUCT
           </h2>
           <p
-            className="font-quicksand text-base sm:text-base lg:text-lg text-slate-200"
+            className="font-quicksand text-base sm:text-base lg:text-lg text-white"
             data-aos="fade-up" >
 
             Turning ideas into powerful digital experiences.

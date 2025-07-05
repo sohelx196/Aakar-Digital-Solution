@@ -58,7 +58,7 @@ function Footer() {
           </a>
 
 
-          <a href="https://wa.me/919131440488?text=Hello%20Aakar%2C%20what%20services%20do%20you%20offer%3F"
+          <a href="https://wa.me/918839663908?text=Hello%20Aakar%2C%20what%20services%20do%20you%20offer%3F"
           target="_blank"
           rel="noopener noreferrer">
           <img src={whatsapp} alt="WhatsApp" className=" w-5 h-5 cursor-pointer hover:opacity-70 transition" />

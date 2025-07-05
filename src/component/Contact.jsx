@@ -119,12 +119,12 @@ function Contact() {
 
             <div className="flex flex-col items-center space-y-2">
               <img src={phone} alt="Phone" className="w-7 h-7 mb-1" />
-              <p className="font-semibold font-quicksand">9009239011</p>
+              <p className="font-semibold font-quicksand">9977303707 <span className='block'>8839662908</span> </p>
             </div>
 
             <div className="flex flex-col items-center space-y-2">
               <img src={emailIcon} alt="Website" className="w-7 h-7 mb-1" />
-              <p className="font-semibold font-quicksand">aakargraphics@gmail.com</p>
+              <p className="font-semibold font-quicksand">aakarkhandwa21@gmail.com</p>
             </div>
           </div>
         </div>
