@@ -1,6 +1,7 @@
 import React from "react";
 
 import bgImg from '../assets/Images/digitalProduct/bgImg.png'
+import digitalProductImg from '../assets/Images/digitalProduct/digitalProductImg.png'
 
 function AakarDigitalProduct() {
   return (
@@ -26,7 +27,29 @@ function AakarDigitalProduct() {
       </section>
 
 
-
+           {/* Overview Section */}
+              <section className="py-16 px-4 sm:px-10 lg:px-24 bg-gray-100">
+                <div className="flex flex-col-reverse md:flex-row items-center gap-10">
+                  
+                  {/* Text content */}
+                  <div className="md:w-1/2 text-center">
+                    <h3 className="text-3xl lg:text-5xl font-bold text-gray-600 mb-4 font-saira"><span className='text-blue-950'>About</span> Aakar Digital Product </h3>
+                    <p  data-aos="fade-out" className="text-gray-700 font-quicksand text-base sm:text-lg leading-relaxed">
+                     Aakar Digital Product delivers creative and functional digital solutions designed to elevate your brand with smart design and reliable performance.
+                    </p>
+                  </div>
+              
+                  {/* Image */}
+                  <div className="md:w-1/2 " data-aos="zoom-out">
+                    <img
+                      src={digitalProductImg} 
+                      alt="Aakar Overview"
+                      className="rounded-xl w-full md:h-80 h-48 object-contain"
+                    />
+                  </div>
+              
+                </div>
+              </section>
 
     </>
   );

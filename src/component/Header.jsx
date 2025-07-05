@@ -38,10 +38,11 @@ function Header() {
             className="font-quicksand hover:border border-gray-700 
             border-b-4 font-semibold  border 
             hover:shadow-md   duration-100
-            bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-4 py-2 rounded-lg shadow hover:scale-105 transition-all">
+            text-gray-950 px-4 py-2 rounded-lg shadow hover:scale-105 transition-all">
             Contact Us
           </Link>
         </div>
+        {/* old bg --> bg-gradient-to-r from-purple-500 to-indigo-500 */}
 
         {/* Mobile Menu Icon */}
         <div className="md:hidden">

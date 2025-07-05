@@ -4,7 +4,7 @@ import emailjs from '@emailjs/browser';
 import arrow from '../assets/Images/arrowIcon.png';
 import locationIcon from '../assets/Images/icons/location.svg';
 import phone from '../assets/Images/icons/telephone.svg';
-import website from '../assets/Images/icons/website.svg';
+import emailIcon from '../assets/Images/icons/emailIcon.svg';
 import bgPattern from '../assets/Images/contactDesign.png';
 import contactImg from '../assets/Images/contactImg.jpg';
 
@@ -123,8 +123,8 @@ function Contact() {
             </div>
 
             <div className="flex flex-col items-center space-y-2">
-              <img src={website} alt="Website" className="w-7 h-7 mb-1" />
-              <p className="font-semibold font-quicksand">aakargraphics.com</p>
+              <img src={emailIcon} alt="Website" className="w-7 h-7 mb-1" />
+              <p className="font-semibold font-quicksand">aakargraphics@gmail.com</p>
             </div>
           </div>
         </div>

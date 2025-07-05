@@ -105,7 +105,7 @@
         <section className=" px-4 sm:px-10 lg:px-24 space-y-20 lg:space-y-40">
 
 <div data-aos="fade-up" className='mt-10 lg:mt-20 flex justify-center item-center flex-col text-center'>
-  <h1 className='font-saira font-bold text-4xl lg:text-6xl  '>See <span className='text-blue-950 '>Our Work</span></h1>
+  <h1 className='font-saira font-bold text-4xl lg:text-6xl text-gray-600 '>A Showcase of Our <span className='text-blue-950 '>Graphic Excellence</span></h1>
 </div>
 
           {services.map((service, index) => (
@@ -148,7 +148,7 @@
 
  <div
   data-aos="zoom-out"
-  className="relative border   bg-center bg-cover p-10 rounded-xl text-blue-950 lg:my-28 text-center lg:mx-32 mx-7"
+  className="relative border border-gray-600  bg-center bg-cover p-10 rounded-xl text-blue-950 lg:my-28 text-center lg:mx-32 mx-7"
   style={{ backgroundImage: `url(${aakarBg})` }}>
 
   <p className="font-quicksand font-semibold text-2xl lg:text-4xl lg:leading-tight leading-relaxed">

@@ -8,6 +8,9 @@
   import bgImage from '../assets/Images/web&software/heroImg.png';
   import webAbout from '../assets/Images/web&software/webAboutImg.png';
   import megaviz from '../assets/Images/web&software/megaviz.png';
+  import bens from '../assets/Images/web&software/bensschool.png';
+  import satpura from '../assets/Images/web&software/satpuratrails.png';
+  import worldtech from '../assets/Images/web&software/worldtech.png';
 
 
 
@@ -31,30 +34,20 @@
         image: megaviz,
       },
       {
-        title: "Kadai Panner",
-        description: "Designed for Amrit BLU veg family restaurant, sihada road",
-        image: kadaiPartner,
+        title: "BENS PUBLIC SCHOOL",
+        description: "Designed Bens Public School Website , Khandwa ",
+        image: bens,
       },
       {
-        title: "Vasant Panchami",
-        description: "Designed for Luxewash in Indore",
-        image: vasantPanchami,
+        title: "SATPURA TRAILS",
+        description: "Satpura trails is a tour & travel company providing amazing packages.",
+        image: satpura,
       },
       {
-        title: "Nirmal bike decore",
-        description: "Designed for bike accessories & decore , padawa khandwa",
-        image: nirmalBike,
+        title: "WORLDTECH LAB",
+        description: "Official website of world tech lab - An IT company",
+        image: worldtech,
       },
-      {
-        title: "Marksheet Design",
-        description: "Designed for Arvind Kumar Nitin Kumar School , Khandwa ",
-        image: arvindKumar,
-      },
-      {
-        title: "Shivlok Entry Gate",
-        description: "Entry gate designed for festival pandal",
-        image: shivji,
-      }
     ];
 
     return (
@@ -108,7 +101,7 @@
         <section className=" px-4 sm:px-10 lg:px-24 space-y-20 lg:space-y-40">
 
 <div data-aos="fade-up" className='mt-10 lg:mt-20 flex justify-center item-center flex-col text-center'>
-  <h1 className='font-saira font-bold text-4xl lg:text-6xl  '>See <span className='text-blue-950 '>Our Work</span></h1>
+  <h1 className='font-saira font-bold text-4xl lg:text-6xl text-gray-600 '>Explore the Magic   <span className='text-blue-950 '>We Create</span></h1>
 </div>
 
           {services.map((service, index) => (
@@ -151,7 +144,7 @@
 
  <div
   data-aos="zoom-out"
-  className="relative border   bg-center bg-cover p-10 rounded-xl text-blue-950 lg:my-28 text-center lg:mx-32 mx-7"
+  className="relative border border-gray-600 mb-10 bg-center bg-cover p-10 rounded-xl text-blue-950 lg:my-28 text-center lg:mx-32 mx-7"
   style={{ backgroundImage: `url(${aakarBg})` }}>
 
   <p className="font-quicksand font-semibold text-2xl lg:text-4xl lg:leading-tight leading-relaxed">

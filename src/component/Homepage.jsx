@@ -19,7 +19,6 @@ import digitalMarketing from '../assets/Images/digitalMarketing.png';
 
 import productImg1 from '../assets/Images/officeImg.jpeg'; 
 import productImg2 from '../assets/Images/officeImg.jpeg';
-import productImg3 from '../assets/Images/officeImg.jpeg';
 
 import whyChooseImg from '../assets/Images/officeImg.jpeg';
 
@@ -31,6 +30,7 @@ import DarkVariantExample from '../feature/DarkVariantExample';
 
 import malikenPatel from '../assets/Images/OurClient/malikenPatel.jpg'
 
+import bgImg from '../assets/Images/otherImages/aakarBg.png'
 function Homepage() {
 
   useEffect(() => {
@@ -157,7 +157,8 @@ const scrollRef = useRef(null);
       <h1  data-aos="fade-right"  className="font-saira text-4xl sm:text-4xl md:text-6xl lg:text-8xl font-bold">
         <span className='block'>AAKAR</span> <span className=''>DIG<span className='text-indigo-400 inline'>IT</span>AL</span> <span>SOLUTION</span>
       </h1>
-      <p data-aos="fade-left" className="text-lg sm:text-lg md:text-lg  lg:text-4xl font-saira ">
+
+      <p  data-aos="fade-left" className="text-2xl sm:text-lg md:text-lg  lg:text-4xl font-saira ">
         Powered by <span className='font-black'>Digital Computing®</span>
       </p>
 
@@ -324,7 +325,7 @@ const scrollRef = useRef(null);
         {/* Right Content */}
         <div className="w-full md:w-1/2 space-y-6 text-center md:text-left" data-aos="fade-left">
           <h2 className="text-gray-600 font-saira text-4xl sm:text-5xl lg:text-8xl font-bold leading-tight">
-            SOFTWARE <span className="block text-blue-950">SOLUTION</span>
+            SOFTWARE <span className="block text-blue-950">SOLUTIONS</span>
           </h2>
           <p className="text-sm sm:text-base md:text-lg font-quicksand text-gray-700 leading-relaxed max-w-xl mx-auto md:mx-0">
           At Aakar Digital Solutions, we craft smart, scalable software that simplifies your workflow and drives business growth. From web apps to enterprise tools, our solutions blend innovation, usability, and performance to deliver real results.
@@ -479,7 +480,7 @@ const scrollRef = useRef(null);
     <section className="w-full lg:min-h-screen flex items-center justify-center px-6 py-10  relative">
       <div className="max-w-3xl w-full mx-auto bg-white rounded-3xl border border-gray-600 shadow-2xl p-10 md:p-16 transition-all duration-500 ease-in-out">
         <h2 className="font-saira text-4xl sm:text-5xl font-bold text-center text-gray-600 mb-10">
-          “ WHAT OUR CLIENTS SAY ”
+           WHAT OUR <span className='text-blue-950'>CLIENTS SAY</span> 
         </h2>
 
         <p className="font-cabin text-gray-600 text-lg leading-relaxed text-center mb-10"> {`"${text}"`}</p>

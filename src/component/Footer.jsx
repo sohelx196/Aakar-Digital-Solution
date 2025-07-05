@@ -49,9 +49,22 @@ function Footer() {
           © 2025 <span className=" font-semibold">Aakar Digital Solution</span>. All rights reserved.
         </p>
         <div className="flex gap-8">
-          <img src={instagram} alt="Instagram" className=" w-5 h-5 cursor-pointer hover:opacity-70 transition" />
+          <a href="#">
+            <img src={instagram} alt="Instagram" className=" w-5 h-5 cursor-pointer hover:opacity-70 transition" />
+          </a>
+
+          <a href="#">
           <img src={facebook} alt="Facebook" className=" w-5 h-5 cursor-pointer hover:opacity-70 transition" />
+          </a>
+
+
+          <a href="https://wa.me/919131440488?text=Hello%20Aakar%2C%20what%20services%20do%20you%20offer%3F"
+          target="_blank"
+          rel="noopener noreferrer">
           <img src={whatsapp} alt="WhatsApp" className=" w-5 h-5 cursor-pointer hover:opacity-70 transition" />
+          </a>
+
+
         </div>
       </div>
 
