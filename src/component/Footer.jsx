@@ -3,14 +3,14 @@ import logo from '../assets/Images/aakarFinalLogo.png';
 import instagram from '../assets/Images/icons/instagram.svg';
 import facebook from '../assets/Images/icons/facebook.svg'; 
 import whatsapp from '../assets/Images/icons/whatsapp.svg';
-
+import { Link } from 'react-router-dom';
 
 function Footer() {
   return (
     <footer className=" text-white px-6 md:px-16 py-12">
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row justify-between items-start gap-12">
    
-        <div className="flex-1">
+        <div className="flex-1 ">
           <img src={logo} alt="Aakar Logo" className="w-36 mb-2 brightness-110 contrast-125" />
           <p className="ml-3 font-quicksand font-bold text-sm text-gray-700 leading-loose max-w-xs">
             Crafting smart, creative, and reliable digital solutions to grow your business.
@@ -20,24 +20,27 @@ function Footer() {
         
         <div className="font-cabin text-black grid grid-cols-2 sm:grid-cols-3 gap-14 text-sm w-full lg:w-auto">
           <div className='text-center'>
-            <h4 className="mb-3 font-medium text-gray-500 font-cabin text-base">Company</h4>
+            <h4 className="mb-3 font-medium text-blue-950 font-cabin text-lg">Pages</h4>
             <ul className=" space-y-4 mt-4">
-              <li className="hover:text-gray-400  cursor-pointer text-base  font-cabin ">Home</li>
-              <li className="hover:text-gray-400  cursor-pointer text-base  font-cabin ">About</li>
+              <li className="hover:text-gray-600  cursor-pointer text-base  font-cabin ">Home</li>
+              <li className="hover:text-gray-600  cursor-pointer text-base  font-cabin ">About</li>
+              <li className="hover:text-gray-600  cursor-pointer text-base  font-cabin ">Service</li>
             </ul>
           </div>
           <div className='text-center'>
-            <h4 className="mb-3 font-medium text-gray-500 font-cabin text-base">Services</h4>
+            <h4 className="mb-3 font-medium text-blue-950 font-cabin text-lg">Carrer At Aakar</h4>
             <ul className="space-y-4 mt-4">
-              <li className="hover:text-gray-400 cursor-pointer text-base  font-cabin">Graphics</li>
-              <li className="hover:text-gray-400 cursor-pointer text-base  font-cabin">Services</li>
+              <li className="hover:text-gray-600 cursor-pointer text-base  font-cabin">Current Openings</li>
+              <li className="hover:text-gray-600 cursor-pointer text-base  font-cabin"></li>
             </ul>
           </div>
           <div className='text-center'>
-            <h4 className="mb-3 font-medium text-gray-500 font-cabin text-base">Support</h4>
+            <h4 className="mb-3 font-medium text-blue-950 font-cabin text-lg">Support</h4>
             <ul className="space-y-4 mt-4">
               {/* <li className="hover:text-gray-400 cursor-pointer text-base">Career</li> */}
-              <li className="hover:text-gray-400 cursor-pointer text-base  font-cabin">Contact</li>
+              <Link to='/contact'>
+              <li className="hover:text-gray-600 cursor-pointer text-base  font-cabin">Contact</li>
+              </Link>
             </ul>
           </div>
         </div>
@@ -49,11 +52,11 @@ function Footer() {
           © 2025 <span className=" font-semibold">Aakar Digital Solution</span>. All rights reserved.
         </p>
         <div className="flex gap-8">
-          <a href="#">
+          <a href="https://www.instagram.com/aakardigital_solutions?igsh=NDRpNDMzaWxlcm9y">
             <img src={instagram} alt="Instagram" className=" w-5 h-5 cursor-pointer hover:opacity-70 transition" />
           </a>
 
-          <a href="#">
+          <a href="">
           <img src={facebook} alt="Facebook" className=" w-5 h-5 cursor-pointer hover:opacity-70 transition" />
           </a>
 

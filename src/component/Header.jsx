@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import aakarLogo from '../assets/Images/aakarFinalLogo.png';
 
 import hamburger from '../assets/Images/icons/hamburger.svg';
@@ -17,18 +17,18 @@ function Header() {
           <img
             src={aakarLogo}
             alt="Aakar Digital Solution Logo"
-            className="w-36 h-auto"
-          />
+            className="w-36 h-auto"/>
+
           </Link>
         </div>
 
         {/* Center Nav Links */}
         <nav className="hidden md:flex flex-1 justify-center space-x-12">
-          <Link to="/" className="font-quicksand text-base font-semibold transition-all duration-300 transform hover:-translate-y-1">Home</Link>
-          <Link to="aakarGraphics" className="font-quicksand text-base font-semibold transition-all duration-300 transform hover:-translate-y-1">Aakar Graphics</Link>
-          <Link to="aakarPrakashan" className="font-quicksand text-base font-semibold transition-all duration-300 transform hover:-translate-y-1">Aakar Prakashan</Link>
-          <Link to="aakarDigitalProduct" className="font-quicksand text-base font-semibold transition-all duration-300 transform hover:-translate-y-1">Aakar Digital Product</Link>
-          <Link to="aakarWebAndSoftware" className="font-quicksand text-base font-semibold transition-all duration-300 transform hover:-translate-y-1">Aakar Web & Software</Link>
+          <Link  to="/" className="font-quicksand text-base font-semibold transition-all duration-300 transform hover:-translate-y-1">Home</Link>
+          <Link  to="aakarGraphics" className="font-quicksand text-base font-semibold transition-all duration-300 transform hover:-translate-y-1">Aakar Graphics</Link>
+          <Link  to="aakarPrakashan" className="font-quicksand text-base font-semibold transition-all duration-300 transform hover:-translate-y-1">Aakar Prakashan</Link>
+          <Link  to="aakarDigitalProduct" className="font-quicksand text-base font-semibold transition-all duration-300 transform hover:-translate-y-1">Aakar Digital Product</Link>
+          <Link  to="aakarWebAndSoftware" className="font-quicksand text-base font-semibold transition-all duration-300 transform hover:-translate-y-1">Aakar Web & Software</Link>
         </nav>
 
         {/* Contact Button */}
@@ -42,13 +42,13 @@ function Header() {
             Contact Us
           </Link>
         </div>
-        {/* old bg --> bg-gradient-to-r from-purple-500 to-indigo-500 */}
+        
 
         {/* Mobile Menu Icon */}
         <div className="md:hidden">
           <button onClick={() => setMenuOpen(!menuOpen)}>
             <img src={menuOpen ? crossIcon : hamburger} alt="Menu Icon" className="w-8 h-8 mt-2" />
-           </button>
+          </button>
         </div>
 
       </div>
