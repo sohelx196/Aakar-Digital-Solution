@@ -230,8 +230,23 @@ const scrollRef = useRef(null);
 
     </div>
   </div>
+
 </section>
      {/* about us end */}
+
+  <section className='bg-slate-900 lg:h-screen flex flex-col justify-center items-center'>
+    <div className=''>
+      <h1 className='text-slate-50 font-saira font-medium text-6xl text-center'>
+        <span data-aos="fade-right" data-aos-delay="200">OUR </span>
+        <span className='text-yellow-100' data-aos="fade-right" data-aos-delay="300">LATEST </span>
+        <span data-aos="fade-right" data-aos-delay="500">ARRIVAL</span>
+         <div className="w-20 h-1 bg-gray-600 mx-auto my-6 rounded-full"></div>
+        <p className='font-quicksand mt-10 text-8xl text-white'>Aakar Prakashan</p>
+      </h1>
+      
+              
+    </div>
+  </section>
 
 {/* Service start */}
 <section className="bg-[#f9fafb]  flex items-center justify-center px-6 py-16 m-5 rounded-3xl">
@@ -403,7 +418,7 @@ const scrollRef = useRef(null);
 
 {/* our product start */}
     
-<section className="bg-[#2b1d49] py-16 px-4 sm:px-10 lg:px-20 overflow-hidden"> {/* added overflow-hidden */}
+<section className="bg-slate-900 py-16 px-4 sm:px-10 lg:px-20 overflow-hidden"> {/* added overflow-hidden */}
   <h2 data-aos="zoom-in" className="text-center text-white font-saira font-extrabold text-4xl sm:text-5xl md:text-7xl">
     OUR PRODUCTS
   </h2>
