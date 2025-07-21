@@ -234,16 +234,16 @@ const scrollRef = useRef(null);
 </section>
      {/* about us end */}
 
-  <section className='bg-slate-900 lg:h-screen flex flex-col justify-center items-center'>
+  <section className='bg-slate-900 h-screen lg:h-screen flex flex-col justify-center items-center'>
     <div className=''>
-      <h1 className='text-slate-50 font-saira font-medium text-6xl text-center'>
+      <h1 className='text-slate-50 font-saira font-medium text-4xl lg:text-6xl text-center'>
         <span data-aos="fade-right" data-aos-delay="200">OUR </span>
         <span className='text-yellow-100' data-aos="fade-right" data-aos-delay="300">LATEST </span>
         <span data-aos="fade-right" data-aos-delay="500">ARRIVAL</span>
          <div className="w-20 h-1 bg-gray-600 mx-auto my-6 rounded-full"></div>
-        <p className='font-quicksand mt-10 text-8xl text-white'>Aakar Prakashan</p>
+        <p data-aos='fade-up' data-aos-delay="700" className='font-quicksand mt-10 text-6xl lg:text-8xl text-white'>Aakar Prakashan</p>
       </h1>
-      
+
               
     </div>
   </section>

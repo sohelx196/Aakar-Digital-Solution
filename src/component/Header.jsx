@@ -24,11 +24,11 @@ function Header() {
 
         {/* Center Nav Links */}
         <nav className="hidden md:flex flex-1 justify-center space-x-12">
-          <Link  to="/" className="font-quicksand text-base font-semibold transition-all duration-300 transform hover:-translate-y-1">Home</Link>
-          <Link  to="aakarGraphics" className="font-quicksand text-base font-semibold transition-all duration-300 transform hover:-translate-y-1">Aakar Graphics</Link>
-          <Link  to="aakarPrakashan" className="font-quicksand text-base font-semibold transition-all duration-300 transform hover:-translate-y-1">Aakar Prakashan</Link>
-          <Link  to="aakarDigitalProduct" className="font-quicksand text-base font-semibold transition-all duration-300 transform hover:-translate-y-1">Aakar Digital Product</Link>
-          <Link  to="aakarWebAndSoftware" className="font-quicksand text-base font-semibold transition-all duration-300 transform hover:-translate-y-1">Aakar Web & Software</Link>
+          <Link  to="/" className=" font-quicksand text-base font-semibold transition-all duration-300 transform hover:-translate-y-1">Home</Link>
+          <Link  to="aakarGraphics" className=" font-quicksand text-base font-semibold transition-all duration-300 transform hover:-translate-y-1">Aakar Graphics</Link>
+          <Link  to="aakarPrakashan" className=" font-quicksand text-base font-semibold transition-all duration-300 transform hover:-translate-y-1">Aakar Prakashan</Link>
+          <Link  to="aakarDigitalProduct" className=" font-quicksand text-base font-semibold transition-all duration-300 transform hover:-translate-y-1">Aakar Digital Product</Link>
+          <Link  to="aakarWebAndSoftware" className=" font-quicksand text-base font-semibold transition-all duration-300 transform hover:-translate-y-1">Aakar Web & Software</Link>
         </nav>
 
         {/* Contact Button */}
