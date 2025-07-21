@@ -243,7 +243,6 @@ const scrollRef = useRef(null);
          <div className="w-20 h-1 bg-gray-600 mx-auto my-6 rounded-full"></div>
         <p data-aos='fade-up' data-aos-delay="700" className='font-quicksand mt-10 text-6xl lg:text-8xl text-white'>Aakar Prakashan</p>
       </h1>
-
               
     </div>
   </section>
