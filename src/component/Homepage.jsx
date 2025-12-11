@@ -29,6 +29,7 @@ import banner from '../assets/Images/banner.jpg'
 import DarkVariantExample from '../feature/DarkVariantExample';
 
 import malikenPatel from '../assets/Images/OurClient/malikenPatel.jpg'
+import malikenPatelNew from '../assets/Images/OurClient/malikenPatelNew.jpg'
 
 import bgImg from '../assets/Images/otherImages/aakarBg.png'
 function Homepage() {
@@ -57,9 +58,9 @@ const testimonials = [
     text:   "Consult Aakar Graphics when your brand needs critical care — design that heals, visuals that speak."
   },
   {
-    name: "Itsuki Takahashi",
-    title: "Founder, KNJ Label",
-    image: "https://i.pravatar.cc/100?img=2",
+    name: "Maliken Patel New",
+    title: "Doctor",
+    image: malikenPatelNew,
     text: "Your brand’s health starts with a strong visual diagnosis — Aakar Graphics has the perfect prescription."
   },
   {
@@ -246,14 +247,14 @@ const scrollRef = useRef(null);
               
     </div>
   </section>
-
+    
 {/* Service start */}
 <section className="bg-[#f9fafb]  flex items-center justify-center px-6 py-16 m-5 rounded-3xl">
   <div className="text-center font-saira space-y-4" >
 
     <h1
       className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-gray-600 font-bold leading-tight">
-      <span data-aos="fade-left"  >THE </span><span data-aos="fade-right" className="text-blue-950 ">SERVICES</span>
+      <span data-aos="fade-left">THE </span><span data-aos="fade-right" className="text-blue-950 ">SERVICES</span>
       <span  data-aos="fade-left" className="block"><span>WE</span> OFFER</span>
     </h1>
 
